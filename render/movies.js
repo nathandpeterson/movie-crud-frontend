@@ -3,11 +3,15 @@ const renderMovies = {
     request.getMovies()
       .then(movies => {
       let cardContainer = document.querySelector('.card-deck')
+      cardContainer.innerHTML = ''
       let moviesArr = movies.data
       moviesArr.forEach(movie => {
         let card = makeCard(movie)
         cardContainer.innerHTML += card
         })
+      cardContainer.innerHTML += createButton()
+      activate.create()
+      this.activateShowBtns()
       })
   },
   showOne(id){
@@ -17,17 +21,18 @@ const renderMovies = {
       let cardContainer = document.querySelector('.card-deck')
       let card = makeFullCard(movie)
       cardContainer.innerHTML = card
-      this.activateShowButtons()
+      activate.home()
+      activate.del()
+      activate.update()
     })
   },
-  activateShowButtons(){
-    let update = document.querySelector('.edit-movie')
-    update.addEventListener('click', (e) => {
-    e.preventDefault()
-    request.showOne(e.target.id)
-      .then(data => {
-        renderForms.updateMovie(data.data)
+  activateShowBtns(){
+    let showButtons = document.querySelectorAll('.show-movie')
+    for(let i=0; i < showButtons.length; i++){
+      showButtons[i].addEventListener('click', (e) => {
+        e.preventDefault()
+        this.showOne(e.target.id)
       })
-    })
+    }
   }
 }

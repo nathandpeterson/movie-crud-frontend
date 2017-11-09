@@ -1,4 +1,8 @@
 
+function createButton(){
+  return `<button type="button" class="btn btn-block btn-primary create-movie">Add new movie</button>`
+}
+
 function makeCard(card){
   return `
     <div class="card">
@@ -8,8 +12,9 @@ function makeCard(card){
         <p class="card-text">${card.plot}</p>
       <h3>Rating  <span class="badge badge-default">${card.rating}</span></h3>
       <hr>
-      <a href="#" data="${card.id}" class="btn btn-primary show-movie">Read more...</a>
-    </div>`
+      <a href="#" id="${card.id}" class="btn btn-primary show-movie">Read more...</a>
+    </div>
+    `
 }
 
 function makeFullCard(card){

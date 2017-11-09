@@ -12,5 +12,8 @@ const request = {
   },
   create(){
     return axios.post(`${localServer}/movies`)
+  },
+  destroy(id){
+    return axios.delete(`${localServer}/movies/${id}`)
   }
 }

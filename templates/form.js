@@ -26,8 +26,8 @@ function form(){
       </select>
       <br>
       <div class="update-row">
-        <a href="#" data="" class="btn btn-lg btn-warning all-movies">Discard and go back to all movies</a>
-        <button type="button" class="btn btn-lg btn-primary">Submit</button>
+        <a href="#" data="" class="btn btn-lg btn-warning all-movies">Go back to all movies</a>
+        <button type="button" class="btn btn-lg btn-primary create-movie">Submit</button>
       </div>
     </form>`
 }

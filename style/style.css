@@ -10,3 +10,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+.create-movie {
+  margin-top: 3rem;
+}

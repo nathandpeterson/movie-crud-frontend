@@ -1,10 +1,12 @@
 const renderForms = {
   newMovie(){
-    let container = document.querySelector('.main-container')
+    let container = document.querySelector('.card-deck')
     container.innerHTML = form()
+    activate.home()
+    activate.new()
   },
   updateMovie(data){
-    let container = document.querySelector('.main-container')
+    let container = document.querySelector('.card-deck')
     container.innerHTML = form()
     document.querySelector('#movie-title').value = data.title
     document.querySelector('#movie-plot').value = data.plot
