@@ -5,51 +5,23 @@
     <title>Movies</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.js"></script>
+    <script defer src="scripts/requests.js"></script>
+    <script defer src="templates/card.js"></script>
+    <script defer src="templates/form.js"></script>
+    <script defer src="render/movies.js"></script>
+    <script defer src="render/forms.js"></script>
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-3">Space Movies</h1>
-        <p class="lead">This is a ratings site for space movies.</p>
+        <h1 class="display-3">Sci-Fi Movie DB</h1>
+        <p class="lead">A ratings site for sci-fi movies</p>
       </div>
     </div>
-    <div class="container">
+    <div class="container movie-cards main-container">
       <div class="card-deck">
-        <div class="card" style="width: 20rem;">
-          <img class="card-img-top" src="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/10/tfa_poster_wide_header-1536x864-959818851016.jpg" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Star Wars</h4>
-            <p class="card-text">Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.</p>
-            <h3>Rating  <span class="badge badge-default">10</span></h3>
-            <hr>
-            <a href="#" class="btn btn-primary">See review.</a>
-          </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-          <img class="card-img-top" src="#" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Star Wars</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-          <img class="card-img-top" src="#" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Star Wars</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-          <img class="card-img-top" src="#" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Star Wars</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+      </div>
     </div>
   </body>
 </html>

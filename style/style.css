@@ -5,3 +5,8 @@
 .badge {
   float: right;
 }
+
+.update-row {
+  display: flex;
+  justify-content: space-between;
+}
