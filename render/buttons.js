@@ -19,6 +19,14 @@ const activate = {
       request.showOne(e.target.id)
         .then(data => {
           renderForms.updateMovie(data.data)
+          document.querySelector('.submit-movie').addEventListener('click', (e) => {
+            e.preventDefault()
+            let updatedData = this.collectFormData()
+            let updateID = e.target.id
+            console.log(updateID, updatedData)
+            request.update(updateID, updatedData)
+            renderMovies.init()
+          })
       })
     })
   },
@@ -28,7 +36,7 @@ const activate = {
     })
   },
   new(){
-    let submitNewMovie = document.querySelector('.create-movie')
+    let submitNewMovie = document.querySelector('.submit-movie')
     submitNewMovie.addEventListener('click', (e) =>{
         e.preventDefault()
         let data = this.collectFormData()

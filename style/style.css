@@ -2,6 +2,14 @@
   width: 100%;
 }
 
+.card {
+  margin-botton: 3rem;
+}
+
+.rating-text {
+  color: gray;
+}
+
 .badge {
   float: right;
 }
@@ -9,11 +17,9 @@
 .update-row {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
-.create-movie {
-  margin-top: 3rem;
-}
 
 #movie-plot {
   height: 5rem;

@@ -1,5 +1,5 @@
 
-function form(){
+function form(id){
   return `
     <form>
       <label for="movie-title">title</label>
@@ -28,8 +28,9 @@ function form(){
       <div class="container">
         <div class="update-row">
           <button type="button" class="btn btn-lg btn-warning all-movies">Go Back</button>
-          <button type="button" class="btn btn-lg btn-primary create-movie">Submit</button>
+          <button id="${id}" type="button" class="btn btn-lg btn-primary submit-movie"> Submit </button>
         </div>
       </div>
-    </form>`
+    </form>
+    `
 }

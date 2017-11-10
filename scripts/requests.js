@@ -7,8 +7,11 @@ const request = {
   showOne(id){
     return axios.get(`${localServer}/movies/${id}`)
   },
-  update(id){
-    return axios.post(`${localServer}/movies/${id}`)
+  update(id, body){
+    return axios.put(`${localServer}/movies/${id}`, body)
+    .then(response => {
+      renderMovies.init()
+    })
   },
   create(data){
     return axios.post(`${localServer}/movies`, data)

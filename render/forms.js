@@ -7,7 +7,8 @@ const renderForms = {
   },
   updateMovie(data){
     let container = document.querySelector('.card-deck')
-    container.innerHTML = form()
+    console.log(data.id)
+    container.innerHTML = form(data.id)
     document.querySelector('#movie-title').value = data.title
     document.querySelector('#movie-plot').value = data.plot
     document.querySelector('#movie-year').value = data.year
