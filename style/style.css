@@ -3,7 +3,8 @@
 }
 
 .card {
-  margin-botton: 3rem;
+  margin-botton: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .rating-text {
@@ -18,6 +19,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
+}
+
+.create-button{
+  margin: 2rem 0;
 }
 
 
