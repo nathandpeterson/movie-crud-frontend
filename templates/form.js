@@ -25,9 +25,11 @@ function form(){
         <option>10</option>
       </select>
       <br>
-      <div class="update-row">
-        <a href="#" data="" class="btn btn-lg btn-warning all-movies">Go back to all movies</a>
-        <button type="button" class="btn btn-lg btn-primary create-movie">Submit</button>
+      <div class="container">
+        <div class="update-row">
+          <button type="button" class="btn btn-lg btn-warning all-movies">Go Back</button>
+          <button type="button" class="btn btn-lg btn-primary create-movie">Submit</button>
+        </div>
       </div>
     </form>`
 }

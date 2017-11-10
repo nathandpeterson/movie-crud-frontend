@@ -1,6 +1,6 @@
 
 function createButton(){
-  return `<button type="button" class="btn btn-block btn-primary create-movie">Add new movie</button>`
+  return `<button type="button" class="btn btn-block btn-primary create-movie-form">Add new movie</button>`
 }
 
 function makeCard(card){

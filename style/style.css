@@ -14,3 +14,7 @@
 .create-movie {
   margin-top: 3rem;
 }
+
+#movie-plot {
+  height: 5rem;
+}

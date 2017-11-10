@@ -1,5 +1,5 @@
 const renderForms = {
-  newMovie(){
+  newMovieForm(){
     let container = document.querySelector('.card-deck')
     container.innerHTML = form()
     activate.home()

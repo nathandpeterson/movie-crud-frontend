@@ -22,12 +22,27 @@ const activate = {
       })
     })
   },
-  new(){
-
-  },
   create(){
-    document.querySelector('.create-movie').addEventListener('click', () => {
-      renderForms.newMovie()
+    document.querySelector('.create-movie-form').addEventListener('click', () => {
+      renderForms.newMovieForm()
     })
+  },
+  new(){
+    let submitNewMovie = document.querySelector('.create-movie')
+    submitNewMovie.addEventListener('click', (e) =>{
+        e.preventDefault()
+        let data = this.collectFormData()
+        request.create(data)
+        .then(res => renderMovies.init())
+    })
+  },
+  collectFormData(){
+    let data = {}
+    data.title = document.querySelector('#movie-title').value
+    data.plot = document.querySelector('#movie-plot').value
+    data.year = document.querySelector('#movie-year').value
+    data.image_url = document.querySelector('#movie-image-url').value
+    data.rating = document.querySelector('#movie-rating').value
+    return data
   }
 }

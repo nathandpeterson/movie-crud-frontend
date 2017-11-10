@@ -10,10 +10,11 @@ const request = {
   update(id){
     return axios.post(`${localServer}/movies/${id}`)
   },
-  create(){
-    return axios.post(`${localServer}/movies`)
+  create(data){
+    return axios.post(`${localServer}/movies`, data)
   },
   destroy(id){
     return axios.delete(`${localServer}/movies/${id}`)
+    .then(response => renderMovies.init())
   }
 }
