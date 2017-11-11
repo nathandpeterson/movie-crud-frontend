@@ -1,5 +1,5 @@
 
-function form(id){
+function form(id) {
   return `
     <form>
       <label for="movie-title">title</label>
