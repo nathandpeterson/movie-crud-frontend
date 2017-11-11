@@ -3,12 +3,12 @@ function form(id){
   return `
     <form>
       <label for="movie-title">title</label>
-      <input type="text" id="movie-title" class="form-control">
+      <input required type="text" id="movie-title" class="form-control">
       </input>
       <label for="movie-plot">plot</label>
-      <input type="text" id="movie-plot" class="form-control">
+      <input required type="text" id="movie-plot" class="form-control">
       <label for="movie-year">year released</label>
-      <input type="text" id="movie-year" class="form-control">
+      <input required type="integer" id="movie-year" class="form-control">
       <label for="movie-image">image url</label>
       <input type="text" id="movie-image-url" class="form-control">
       <label for="movie-rating">rating</label>

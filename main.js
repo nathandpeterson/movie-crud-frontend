@@ -5,7 +5,7 @@ const crud = {
     renderMovies.init()
   },
   createMovie(){
-    request.create(response => console.log(response))
+    request.create(response => response)
     renderMovies.init()
   }
 }

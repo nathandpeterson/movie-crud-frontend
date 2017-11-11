@@ -1,5 +1,4 @@
-
-
+// Activate buttons on menus and collect update input
 const activate = {
   home(){
     document.querySelector('.all-movies').addEventListener('click', () => {
@@ -19,14 +18,7 @@ const activate = {
       request.showOne(e.target.id)
         .then(data => {
           renderForms.updateMovie(data.data)
-          document.querySelector('.submit-movie').addEventListener('click', (e) => {
-            e.preventDefault()
-            let updatedData = this.collectFormData()
-            let updateID = e.target.id
-            console.log(updateID, updatedData)
-            request.update(updateID, updatedData)
-            renderMovies.init()
-          })
+          this.updateButtons()
       })
     })
   },
@@ -39,18 +31,23 @@ const activate = {
     let submitNewMovie = document.querySelector('.submit-movie')
     submitNewMovie.addEventListener('click', (e) =>{
         e.preventDefault()
-        let data = this.collectFormData()
+        let data = collectFormData()
+        if(!data) return
         request.create(data)
         .then(res => renderMovies.init())
     })
   },
-  collectFormData(){
-    let data = {}
-    data.title = document.querySelector('#movie-title').value
-    data.plot = document.querySelector('#movie-plot').value
-    data.year = document.querySelector('#movie-year').value
-    data.image_url = document.querySelector('#movie-image-url').value
-    data.rating = document.querySelector('#movie-rating').value
-    return data
+  updateButtons(){
+    document.querySelector('.all-movies').addEventListener('click', (e) => {
+      e.preventDefault()
+      renderMovies.init()
+    })
+    document.querySelector('.submit-movie').addEventListener('click', (e) => {
+      e.preventDefault()
+      let updatedData = collectFormData()
+      let updateID = e.target.id
+      request.update(updateID, updatedData)
+      renderMovies.init()
+    })
   }
 }

@@ -4,6 +4,7 @@ const renderMovies = {
       .then(movies => {
       let cardContainer = document.querySelector('.card-deck')
       cardContainer.innerHTML = ''
+      document.querySelector('.dialogue').innerHTML = ''
       let moviesArr = movies.data
       moviesArr.forEach(movie => {
         let card = makeCard(movie)
